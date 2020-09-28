@@ -5,10 +5,12 @@ tam_max = 26
 
 def Mod():
     while True:
-        mode = input('''Encrypt or Descrypt?
-        [E] Encrypt        [D] Descrypt\n-: ''')
+        print('.'*30)
+        print('Sistema de acesso a área contaminada ')
+        mode = input('''Encriptar ou Descriptar?
+        [E] Encriptar        [D] Descriptar\n-: ''')
 
-        if mode in 'Encrypt Descrypt D E d e'.split():
+        if mode in 'Encriptar Descriptar D E d e'.split():
             return mode
         else:
             pass
@@ -17,7 +19,7 @@ def Key():
     key = 0
 
     while True:
-        key = int(input('Enter number of key (1-26):'))
+        key = int(input('Entre com um número de chave (1-26):'))
 
         if 1 <= key <= 26:
             return key
@@ -51,10 +53,11 @@ def msgTranslate(mode, msg, key):
 
 def Main():
     mode = Mod()
-    msg = input('Enter MESSAGE: ')
+    msg = input('Entre com o aceso: ')
+    security = str(input('Os equipamentos de segurança estão ok ?[S/N]'))
     key = Key()
 
-    print('you translated text is:')
+    print('Tradução do seu acesso :')
     print(msgTranslate(mode, msg, key))
 
 init = Main()
