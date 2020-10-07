@@ -61,3 +61,5 @@ def Main():
     print(msgTranslate(mode, msg, key))
 
 init = Main()
+
+# alterando
