@@ -69,7 +69,7 @@ else:
 
 descriptografar = input("\nDeseja descriptografar sua senha [S/N]?\n").upper()
 if descriptografar == 'S':
-    print("Descripitografando\n")
+    print('\033[34m'+'\nAgora iremos criptografar sua senha para torna-la mais segura ...\n'+'\033[0;0m')
     sleep(1)
     print(f"Sua senha descriptografada {senha}")
 else:
